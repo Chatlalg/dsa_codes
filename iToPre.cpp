@@ -93,7 +93,7 @@ string infixToPrefix(string infix) {
 }
 
 int main() {
-  string s = "(2-(4+3))";
+  string s = "(G+H)/F/E+D-C*B^A";
   cout << "Infix expression: " << s << endl;
   cout << "Postfix Expression: " << infixToPostfix(s) << endl;
   cout << "Prefix Expression: " << infixToPrefix(s) << endl;
