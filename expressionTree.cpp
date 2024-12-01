@@ -45,7 +45,7 @@ Node* createExpressionTree(string postfix){
         
         char ch=postfix[i];
 
-        if(isalnum(ch)){
+        if(isalnum(ch)){// checks for operand
             stk.push(new Node(ch));
         }else{
             Node* opNode = new Node(ch);
