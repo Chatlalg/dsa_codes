@@ -3,6 +3,9 @@
         "*.ejs": "html",
         "chrono": "cpp",
         "functional": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "iostream": "cpp",
+        "*.tcc": "cpp",
+        "iosfwd": "cpp"
     }
 }
