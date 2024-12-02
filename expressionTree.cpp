@@ -24,9 +24,9 @@ struct Node {
 //             Node* newNode = new Node(ch);
 
 //             // Pop two nodes for the operator
-//             newNode->left = stk.top();
+//             newNode->right= stk.top();
 //             stk.pop();
-//             newNode->right = stk.top();
+//             newNode->left = stk.top();
 //             stk.pop();
 
 //             // Push the new subtree back to the stack
@@ -50,9 +50,9 @@ Node* createExpressionTree(string postfix){
         }else{
             Node* opNode = new Node(ch);
 
-            opNode->left=stk.top();
-            stk.pop();
             opNode->right=stk.top();
+            stk.pop();
+            opNode->left=stk.top();
             stk.pop();
 
             stk.push(opNode);

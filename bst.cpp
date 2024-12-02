@@ -47,9 +47,9 @@ Node* delIterative(Node* root, int key) {
         delete curr;
     } else {
         Node* p = NULL;
-        Node* temp = curr->right;
-        while (temp->left != NULL) {
-            p = temp;
+        Node* temp = curr->right; // finding inorder successor
+        while (temp->left != NULL) { 
+            p = temp; // parent of inorder successor
             temp = temp->left;
         }
 
@@ -65,19 +65,7 @@ Node* delIterative(Node* root, int key) {
     return root;
 }
 
-#include <iostream>
-using namespace std;
 
-struct Node {
-    int key;
-    Node* left;
-    Node* right;    
-    Node(int item) {
-        key = item;
-        left = NULL;
-        right = NULL;
-    }
-};
 
 // A utility function to insert a new node with 
 // the given key
